@@ -1,9 +1,7 @@
-;; The first three lines of this file were inserted by DrRacket. They record metadata
-;; about the language level of this file in a form that our tools can easily process.
-#reader (lib "htdp-beginner-reader.ss" "lang")
-        ((modname ex.9.5.8)
-         (read-case-sensitive #t)
-         (teachpacks ((lib "draw.ss" "teachpack" "htdp"))))
+#lang racket
+
+(require lang/htdp-beginner)
+(require htdp/draw)
 
 ;;
 ;; draw-circles
