@@ -48,7 +48,7 @@
 ;; exercise 3.1.3
 (check-within (profit 5.0) 415.2 delta)
 (check-within (profit 4.0) 889.2 delta)
-(check-within (profit 3.0) 1063.2 delta)
+(check-within (profit 3.0) 1063.2 delta) ; max profit
 
 (test)
 
