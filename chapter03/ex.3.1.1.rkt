@@ -45,9 +45,10 @@
 (check-within (revenue 4.0) 1080.0 delta)
 (check-within (revenue 3.0) 1260.0 delta)
 
-(test)
+;; exercise 3.1.3
+(check-within (profit 5.0) 415.2 delta)
+(check-within (profit 4.0) 889.2 delta)
+(check-within (profit 3.0) 1063.2 delta)
 
-(profit 5.0) ; 415.2
-(profit 4.0) ; 889.2
-(profit 3.0) ; 1063.2
+(test)
 
