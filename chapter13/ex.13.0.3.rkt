@@ -1,13 +1,12 @@
 #lang racket
 
-(require lang/htdp-beginner)
 (require htdp/testing)
 
 ;; 13.0.3-1
 (check-expect
   (equal? (list 0 1 2 3 4 5)
           (cons 0 (cons 1 (cons 2 (cons 3 (cons 4 (cons 5 empty)))))))
-  #t)
+  true)
 
 ;; 13.0.3-2
 (check-expect
@@ -16,7 +15,7 @@
                 (cons (cons 'eve (cons 1 empty))
                       (cons (cons 'louisXIV (cons 2 empty))
                             empty))))
-  #t)
+  true)
 
 ;; 13.0.3-3
 (check-expect
@@ -25,7 +24,7 @@
                 (cons (cons 1 (cons 2 empty))
                       (cons (cons 1 (cons 2 (cons 3 empty)))
                             empty))))
-  #t)
+  true)
 
 (test)
 

@@ -10,13 +10,13 @@
 (check-expect
   (equal? (cons 'a (list 0 false))
           (cons 'a (cons 0 (cons false empty))))
-  #t)
+  true)
 
 ;; 13.0.5-2
 (check-expect
   (equal? (list (cons 1 (cons 13 empty)))
           (cons (cons 1 (cons 13 empty)) empty))
-  #t)
+  true)
 
 ;; 13.0.5-3 
 (check-expect
@@ -25,7 +25,7 @@
                 (cons empty
                       (cons (cons 1 empty)
                             empty))))
-  #t)
+  true)
 
 ;; 13.0.5-4
 (check-expect
@@ -33,7 +33,7 @@
           (cons 'a
                 (cons (cons 1 empty)
                       (cons false (cons empty empty)))))
-  #t)
+  true)
 
 
 ;;
@@ -44,24 +44,24 @@
 (check-expect
   (equal? (cons 'a (list 0 false))
           (list 'a 0 false))
-  #t)
+  true)
 
 ;; 13.0.5-2
 (check-expect
   (equal? (list (cons 1 (cons 13 empty)))
           (list (list 1 13)))
-  #t)
+  true)
 
 ;; 13.0.5-3 
 (check-expect
   (equal? (list empty empty (cons 1 empty))
           (list empty empty (list 1)))
-  #t)
+  true)
 
 ;; 13.0.5-4
 (check-expect
   (equal? (cons 'a (cons (list 1) (list false empty)))
           (list 'a (list 1) false empty))
-  #t)
+  true)
 
 (test)
