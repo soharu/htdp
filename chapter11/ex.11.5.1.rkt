@@ -8,9 +8,9 @@
     [(zero? x) n]
     [else (add (add1 n) (sub1 x))]))
 
-(check-expect 3 (add 3 0))
-(check-expect 2 (add 0 2))
-(check-expect 5 (add 3 2))
+(check-expect (add 3 0) 3)
+(check-expect (add 0 2) 2)
+(check-expect (add 3 2) 5)
 
 (test)
 
