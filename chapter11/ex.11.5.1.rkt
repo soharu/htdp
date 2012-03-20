@@ -5,7 +5,7 @@
 
 (define (add n x)
   (cond
-    [(= x 0) n]
+    [(zero? x) n]
     [else (add (add1 n) (sub1 x))]))
 
 (check-expect 3 (add 3 0))
