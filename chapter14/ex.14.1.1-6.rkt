@@ -181,6 +181,7 @@
 (check-expect (average-age Gustav 1990) 179/5)
 
 ;; exercise 14.1.5
+;; ---------------
 ;; eye-colors : ftn -> list
 (define (eye-colors a-ftree)
   (cond
@@ -194,6 +195,7 @@
 (check-expect (eye-colors Gustav) (list 'brown 'pink 'blue 'green 'green))
 
 ;; exercise 14.1.6
+;; ---------------
 ;; proper-blue-eyed-ancestor? : ftn -> boolean
 (define (proper-blue-eyed-ancestor? a-ftree)
   (cond
