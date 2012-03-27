@@ -72,5 +72,15 @@
 (check-expect (count-descendants Eva) 2)
 (check-expect (count-descendants Dave) 1)
 
+;; count-proper-descendants : parent -> number
+(define (count-proper-descendants a-parent)
+  (count-children (parent-children a-parent)))
+
+(check-expect (count-proper-descendants Gustav) 0)
+(check-expect (count-proper-descendants Carl) 4)
+(check-expect (count-proper-descendants Bettina) 4)
+(check-expect (count-proper-descendants Eva) 1)
+(check-expect (count-proper-descendants Dave) 0)
+
 (test)
 
