@@ -82,5 +82,22 @@
 (check-expect (count-proper-descendants Eva) 1)
 (check-expect (count-proper-descendants Dave) 0)
 
+;; exercise 15.1.4
+;; ---------------
+;; eye-colors : parent -> list
+(define (eye-colors a-parent)
+  (append (list (parent-eyes a-parent))
+          (eye-colors-children (parent-children a-parent))))
+
+(define (eye-colors-children aloc)
+  (cond
+    [(empty? aloc) empty]
+    [else
+      (append (eye-colors (first aloc))
+              (eye-colors-children (rest aloc)))]))
+
+(eye-colors Gustav) ; => '(brown)
+(eye-colors Carl)   ; => '(green yello balck blue brown)
+
 (test)
 
