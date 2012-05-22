@@ -3,6 +3,10 @@
 (require lang/htdp-advanced)
 (require htdp/testing)
 
+;;
+;; exercise 29.3.2
+;;
+
 ;; neighbors : node graph  ->  (listof node)
 ;; to lookup the node in graph
 (define (neighbors node graph)
@@ -61,6 +65,32 @@
 (check-expect (find-route 0 4 Graph-as-vector) (list 0 1 4))
 
 (time (find-route 0 4 Graph-as-vector))
+
+;;
+;; exercise 29.3.3
+;; 
+
+(define Graph-with-cycle
+  '((A (B E))
+    (B (E F))
+    (C (B D))
+    (D ())
+    (E (C F))
+    (F (D G))
+    (G ())))
+
+(define Graph-with-cycle-as-vetor
+  (vector (list 1 4)
+          (list 4 5)
+          (list 1 3)
+          empty
+          (list 2 5)
+          (list 3 6)
+          empty))
+
+(check-expect (find-route 1 2 Graph-with-cycle-as-vetor) (list 1 4 2))
+;; (check-expect (find-route 1 3 Graph-with-cycle-as-vetor) (list 1 4 2 3))
+;;   -- infinite loop by cycle
 
 (test)
 
