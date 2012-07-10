@@ -57,6 +57,8 @@
 (check-expect (check-color 'red 'blue 'black 'orange)
               'NothingCorrect)
 
+(test)
+
 ;; master and master-check
 ;; 
 (master)
